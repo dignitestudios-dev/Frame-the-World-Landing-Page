@@ -45,7 +45,7 @@ export default function GallerySection() {
         </div>
 
         <div className="text-center max-w-225 mx-auto">
-          <h2 className="text-[28px] sm:text-[36px] md:text-[44px] lg:text-[55px] font-bold leading-[1.2] text-black">
+          <h2 className="capitalize text-[28px] sm:text-[36px] md:text-[44px] lg:text-[55px] font-bold leading-[1.2] text-black">
             Effortlessly Upload, Organize, and share your Visual Stories with
             other Travel Agents with our intuitive platform.
           </h2>
