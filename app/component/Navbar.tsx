@@ -17,7 +17,7 @@ export default function Navbar() {
         </button>
 
         <nav className="hidden md:flex items-center gap-10 text-[16px] font-medium text-black">
-          <Link href="#home" className="hover:text-[#6CACDF] transition">
+          <Link href="/" className="hover:text-[#6CACDF] transition">
             Home
           </Link>
 

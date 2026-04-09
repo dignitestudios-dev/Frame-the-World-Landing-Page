@@ -1,3 +1,4 @@
+"use client";
 import {
   white_facebook,
   white_instagram,
@@ -5,8 +6,12 @@ import {
 } from "@/public/assets/export";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation"; 
+
+
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <footer className="bg-[#131212] text-white">
       <div className="max-w-7xl mx-auto px-6 py-16 flex items-center gap-10">
@@ -29,13 +34,13 @@ export default function Footer() {
         <p>Copyright © 2026 Frametheworld. All Rights Reserved.</p>
 
         <div className="flex gap-6">
-          <Link href="#" className="hover:text-white transition">
-            Teams & Conditions
-          </Link>
+          <button onClick={() => router.push("/terms-condition")} className="hover:text-white transition">
+            Terms & Conditions
+          </button>
 
-          <Link href="#" className="hover:text-white transition">
+          <button onClick={() => router.push("/privacy-policy")} className="hover:text-white transition">
             Privacy Policy
-          </Link>
+          </button>
         </div>
       </div>
     </footer>
