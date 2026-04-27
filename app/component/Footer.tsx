@@ -35,7 +35,7 @@ export default function Footer() {
 
         <div className="flex gap-6">
           <Link href="/terms-of-services" className="hover:text-white transition">
-            Terms & Conditions
+            Terms of Services
           </Link>
 
           <Link href="/privacy-policy" className="hover:text-white transition">
