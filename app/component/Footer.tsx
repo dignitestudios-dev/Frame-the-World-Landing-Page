@@ -34,7 +34,7 @@ export default function Footer() {
         <p>Copyright © 2026 Frametheworld. All Rights Reserved.</p>
 
         <div className="flex gap-6">
-          <Link href="/terms-of-services" className="hover:text-white transition">
+          <Link href="/terms-condition" className="hover:text-white transition">
             Terms of Services
           </Link>
 
