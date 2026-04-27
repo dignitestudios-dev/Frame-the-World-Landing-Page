@@ -34,13 +34,13 @@ export default function Footer() {
         <p>Copyright © 2026 Frametheworld. All Rights Reserved.</p>
 
         <div className="flex gap-6">
-          <button onClick={() => router.push("/terms-condition")} className="hover:text-white transition">
+          <Link href="/terms-of-services" className="hover:text-white transition">
             Terms & Conditions
-          </button>
+          </Link>
 
-          <button onClick={() => router.push("/privacy-policy")} className="hover:text-white transition">
+          <Link href="/privacy-policy" className="hover:text-white transition">
             Privacy Policy
-          </button>
+          </Link>
         </div>
       </div>
     </footer>
