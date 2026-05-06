@@ -22,7 +22,7 @@ export default function FeaturesSection() {
 
         <div className="text-center md:text-left">
           <h2
-            className="
+            className=" capitalize
           text-[28px]
           sm:text-[34px]
           md:text-[40px]

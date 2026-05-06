@@ -1,3 +1,4 @@
+"use client";
 import {
   white_facebook,
   white_instagram,
@@ -5,8 +6,12 @@ import {
 } from "@/public/assets/export";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation"; 
+
+
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <footer className="bg-[#131212] text-white">
       <div className="max-w-7xl mx-auto px-6 py-16 flex items-center gap-10">
@@ -30,7 +35,7 @@ export default function Footer() {
 
         <div className="flex gap-6">
           <Link href="/terms-of-service" target="_blank" className="hover:text-white transition">
-            Terms & Conditions
+            Terms of Services
           </Link>
 
           <Link href="/privacy-policy" target="_blank" className="hover:text-white transition">
