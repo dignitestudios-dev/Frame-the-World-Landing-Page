@@ -6,9 +6,7 @@ import {
 } from "@/public/assets/export";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation"; 
-
-
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
   const router = useRouter();
@@ -34,12 +32,27 @@ export default function Footer() {
         <p>Copyright © 2026 Frametheworld. All Rights Reserved.</p>
 
         <div className="flex gap-6">
-          <Link href="/terms-of-service" target="_blank" className="hover:text-white transition">
+          <Link
+            href="/terms-of-service"
+            target="_blank"
+            className="hover:text-white transition"
+          >
             Terms of Services
           </Link>
 
-          <Link href="/privacy-policy" target="_blank" className="hover:text-white transition">
+          <Link
+            href="/privacy-policy"
+            target="_blank"
+            className="hover:text-white transition"
+          >
             Privacy Policy
+          </Link>
+          <Link
+            href="/childsafety"
+            target="_blank"
+            className="hover:text-white transition"
+          >
+            Child Safety
           </Link>
         </div>
       </div>
