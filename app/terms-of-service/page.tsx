@@ -1,3 +1,21 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions | Frame The World",
+  description:
+    "Read the Terms and Conditions governing the use of Frame The World services.",
+  keywords: [
+    "terms and conditions",
+    "user agreement",
+    "terms of service",
+    "Frame The World",
+  ],
+  openGraph: {
+    title: "Terms & Conditions | Frame The World",
+    description: "Terms and Conditions for using Frame The World.",
+    type: "website",
+  },
+};
 export default function TermsOfService() {
   return (
     <div className="min-h-screen bg-white text-[#171717]">

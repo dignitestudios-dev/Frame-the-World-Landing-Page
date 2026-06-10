@@ -1,3 +1,22 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Child Safety Policy | Frame The World",
+  description:
+    "Learn about Frame The World's commitment to child safety and protection.",
+  keywords: [
+    "child safety",
+    "child protection",
+    "online safety",
+    "Frame The World",
+  ],
+  openGraph: {
+    title: "Child Safety Policy | Frame The World",
+    description: "Frame The World's Child Safety and Protection Policy.",
+    type: "website",
+  },
+};
+
 export default function ChildSafetyPolicy() {
   const lastUpdated = "June 10, 2026";
 
@@ -268,14 +287,18 @@ export default function ChildSafetyPolicy() {
               </div>
               <p className="text-blue-100 text-sm leading-relaxed max-w-">
                 If you have concerns or inquiries regarding child safety on
-                Frametheworld, please contact our team at <a href="mailto:info@frametheworld.org" className="font-bold text-white">info@frametheworld.org</a>. We are committed to
-                maintaining a secure and positive environment for all users and
-                are continuously working to improve our child safety policies
-                and tools.
+                Frametheworld, please contact our team at{" "}
+                <a
+                  href="mailto:info@frametheworld.org"
+                  className="font-bold text-white"
+                >
+                  info@frametheworld.org
+                </a>
+                . We are committed to maintaining a secure and positive
+                environment for all users and are continuously working to
+                improve our child safety policies and tools.
               </p>
             </div>
-
-           
           </div>
         </article>
       </section>

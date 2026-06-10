@@ -1,3 +1,24 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Frame The World",
+  description:
+    "Read the Privacy Policy of Frame The World and learn how we collect, use, store, and protect your information.",
+  keywords: [
+    "privacy policy",
+    "data privacy",
+    "user data",
+    "Frame The World",
+    "photo sharing",
+  ],
+  openGraph: {
+    title: "Privacy Policy | Frame The World",
+    description:
+      "Learn how Frame The World handles and protects your personal information.",
+    type: "website",
+  },
+};
+
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white text-[#171717]">
