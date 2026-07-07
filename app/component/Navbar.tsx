@@ -46,7 +46,7 @@ export default function Navbar() {
             </div>
           </button>
           <Link
-            href="https://frame-the-world.vercel.app/login"
+            href="https://app.frametheworld.org/login"
             target="_blank"
             className="flex items-center gap-2 bg-white border border-gray-200 text-black rounded-full pl-5 pr-2 py-4 text-sm font-medium hover:bg-gray-100 transition"
           >
