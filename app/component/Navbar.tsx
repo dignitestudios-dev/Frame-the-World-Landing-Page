@@ -1,7 +1,7 @@
 "use client";
 
 import { Logo } from "@/public/assets/export";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -37,19 +37,29 @@ export default function Navbar() {
         <Image src={Logo} alt="Logo" className="w-30 md:w-37.5" />
 
         <div className="hidden md:flex items-center gap-3">
-          <button className="flex items-center gap-2 bg-white border text-black border-gray-200 rounded-full pl-5 pr-2 py-2 text-sm font-medium hover:bg-gray-100 transition">
+          {/* Get Started Button */}
+          {/* Download App Button */}
+          <button className="flex items-center gap-2 bg-white border border-gray-200 text-black rounded-full pl-5 pr-2 py-2 text-sm font-medium hover:bg-gray-100 transition">
             Download Mobile App
             <div className="w-8 h-8 flex items-center justify-center bg-black rounded-full">
               <ChevronDown size={16} className="text-white" />
             </div>
           </button>
+          <Link
+            href="https://frame-the-world.vercel.app/login"
+            target="_blank"
+            className="flex items-center gap-2 bg-white border border-gray-200 text-black rounded-full pl-5 pr-2 py-4 text-sm font-medium hover:bg-gray-100 transition"
+          >
+            Get Started
+            <ArrowRight size={18} />
+          </Link>
         </div>
       </div>
 
       {open && (
-        <div className="md:hidden ">
-          <div className="flex flex-col items-center gap-6 py-6 text-black font-medium">
-            <Link href="#home" onClick={() => setOpen(false)}>
+        <div className="md:hidden bg-white/90 backdrop-blur-md border-t">
+          <div className="flex flex-col items-center gap-5 py-6 text-black font-medium">
+            <Link href="/" onClick={() => setOpen(false)}>
               Home
             </Link>
 
@@ -65,8 +75,25 @@ export default function Navbar() {
               Contact
             </Link>
 
-            <button className="flex items-center gap-2 bg-black text-white px-6 py-2 rounded-full">
-              Download App
+            {/* Get Started */}
+            <Link
+              href="https://frame-the-world.vercel.app/login"
+              target="_blank"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-2 bg-[#6CACDF] text-white rounded-full pl-5 pr-2 py-2 text-sm font-medium hover:bg-[#5a9bd3] transition"
+            >
+              Get Started
+              <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full">
+                <ArrowRight size={16} className="text-[#6CACDF]" />
+              </div>
+            </Link>
+
+            {/* Download Mobile App */}
+            <button className="flex items-center gap-2 bg-white border border-gray-200 text-black rounded-full pl-5 pr-2 py-2 text-sm font-medium hover:bg-gray-100 transition">
+              Download Mobile App
+              <div className="w-8 h-8 flex items-center justify-center bg-black rounded-full">
+                <ChevronDown size={16} className="text-white" />
+              </div>
             </button>
           </div>
         </div>
