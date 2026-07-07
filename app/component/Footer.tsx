@@ -16,13 +16,13 @@ export default function Footer() {
         <Image src={White_logo} alt="Frame The World" className="w-37.5" />
 
         <div className="flex gap-4">
-          <div className="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center hover:bg-white/10 transition">
+          <Link href={'https://www.facebook.com/people/Frame-The-World/61578561998065/?mibextid=wwXIfr&rdid=Xc2GGCdr2vbPp5LK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18hKQZ54ND%2F%3Fmibextid%3DwwXIfr'} target="_blank" className="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center hover:bg-white/10 transition">
             <Image src={white_facebook} className="w-6" alt="facebook" />
-          </div>
+          </Link>
 
-          <div className="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center hover:bg-white/10 transition">
+          <Link href={'https://www.instagram.com/frametheworldapp?utm_source=qr'} target="_blank" className="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center hover:bg-white/10 transition">
             <Image src={white_instagram} className="w-6" alt="instagram" />
-          </div>
+          </Link>
         </div>
       </div>
 
