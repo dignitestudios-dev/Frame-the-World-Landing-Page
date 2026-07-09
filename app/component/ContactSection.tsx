@@ -1,6 +1,7 @@
 import { FaceBook, Instagram, Linkdin, Twitter } from "@/public/assets/export";
 import { Mail, User } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ContactSection() {
   return (
@@ -47,9 +48,23 @@ export default function ContactSection() {
           </div>
 
           <div className="flex gap-4 mt-8 flex-wrap">
-            {[FaceBook, Instagram].map((Icon, index) => (
-              <div
+            {[
+              {
+                icon: FaceBook,
+                href: "https://www.facebook.com/profile.php?id=61578561998065&mibextid=wwXIfr&rdid=LIvEK0RB0epCTKxK&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18hKQZ54ND%2F%3Fmibextid%3DwwXIfr#",
+                alt: "facebook",
+              },
+              {
+                icon: Instagram,
+                href: "https://www.instagram.com/frametheworldapp?utm_source=qr",
+                alt: "instagram",
+              },
+            ].map((social, index) => (
+              <Link
                 key={index}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="
                 w-10 h-10
                 border
@@ -61,8 +76,8 @@ export default function ContactSection() {
                 transition
                 "
               >
-                <Image src={Icon} className="w-5" alt={`social-${index}`} />
-              </div>
+                <Image src={social.icon} className="w-5" alt={social.alt} />
+              </Link>
             ))}
           </div>
         </div>
