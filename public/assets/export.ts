@@ -16,6 +16,11 @@ import White_logo from "./white_logo.png";
 import white_facebook from "./white_facebook.png";
 import white_instagram from "./white_instagram.png";
 import Animated_Slide from "./animated_slide.gif";
+import PhoneLogin from "./login.png";
+import PhoneEiffel from "./eiffel-tower.png";
+import PhoneHome from "./home.png";
+import PhoneOnboarding from "./onboarding.png";
+import PhoneProfile from "./profile.png";
 
 export {
   HeroBg,
@@ -36,4 +41,9 @@ export {
   White_logo,
   white_facebook,
   white_instagram,
+  PhoneLogin,
+  PhoneEiffel,
+  PhoneHome,
+  PhoneOnboarding,
+  PhoneProfile,
 };

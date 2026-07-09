@@ -47,7 +47,7 @@ export default function ContactSection() {
           </div>
 
           <div className="flex gap-4 mt-8 flex-wrap">
-            {[Twitter, FaceBook, Instagram, Linkdin].map((Icon, index) => (
+            {[FaceBook, Instagram].map((Icon, index) => (
               <div
                 key={index}
                 className="
