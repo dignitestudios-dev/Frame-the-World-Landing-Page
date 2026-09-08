@@ -21,49 +21,51 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-white text-[#171717]">
-      {/* Content */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
-        <h1 className="text-3xl font-bold text-center mb-8">Privacy Policy</h1>
+    <div className="min-h-screen bg-white text-[#171717] font-sans">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        {/* Title */}
+        <div className="text-center mb-10 pb-6 border-b border-gray-200">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-2">
+            FRAME THE WORLD PRIVACY POLICY
+          </h1>
+          <p className="text-sm font-medium text-gray-500">
+            Last Updated: 09/07/2026
+          </p>
+        </div>
 
-        <div id="s1" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              1
-            </span>
-            <h2 className="text-xl font-bold">Introduction</h2>
-          </div>
-          <div className="pl-11 text-gray-600 text-sm leading-relaxed space-y-3">
+        {/* Content */}
+        <div className="space-y-10 text-sm sm:text-base text-gray-700 leading-relaxed">
+          {/* 1. INTRODUCTION */}
+          <div className="space-y-3">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              1. INTRODUCTION
+            </h2>
             <p>
               This Privacy Policy explains how Frame The World, LLC (
-              <strong>"we," "our,"</strong> or <strong>"us"</strong>) collects,
-              uses, and protects information when you access or use our website{" "}
+              <strong>&ldquo;we,&rdquo; &ldquo;our,&rdquo;</strong> or{" "}
+              <strong>&ldquo;us&rdquo;</strong>) collects, uses, and protects
+              information when you access or use our website{" "}
               <a
                 href="https://frametheworld.org"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"
               >
                 https://frametheworld.org
               </a>{" "}
-              and mobile application (the <strong>"Services"</strong>).
+              and mobile application (the <strong>&ldquo;Services&rdquo;</strong>).
             </p>
             <p>
               By accessing or using the Services, you agree to this Privacy
               Policy.
             </p>
           </div>
-        </div>
 
-        {/* S2 */}
-        <div id="s2" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              2
-            </span>
-            <h2 className="text-xl font-bold">
-              Intended Audience & Jurisdiction
+          {/* 2. INTENDED AUDIENCE & JURISDICTION */}
+          <div className="space-y-3">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              2. INTENDED AUDIENCE &amp; JURISDICTION
             </h2>
-          </div>
-          <div className="pl-11 text-gray-600 text-sm leading-relaxed space-y-3">
             <p>
               Our Services are designed for and directed to users located in the
               United States. We do not target or market the Services to
@@ -75,17 +77,12 @@ export default function PrivacyPolicy() {
               United States under U.S. law.
             </p>
           </div>
-        </div>
 
-        {/* S3 */}
-        <div id="s3" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              3
-            </span>
-            <h2 className="text-xl font-bold">Information We Collect</h2>
-          </div>
-          <div className="pl-11 text-gray-600 text-sm leading-relaxed space-y-5">
+          {/* 3. INFORMATION WE COLLECT */}
+          <div className="space-y-4">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              3. INFORMATION WE COLLECT
+            </h2>
             <p>
               We collect two categories of information: Personal Information and
               User Content. We may also collect limited anonymized or aggregated
@@ -93,100 +90,95 @@ export default function PrivacyPolicy() {
               log in. This information does not identify individual users.
             </p>
 
-            <div>
-              <h3 className="text-sm font-semibold text-[#171717] mb-3 pb-1 border-b border-gray-100">
+            <div className="space-y-3">
+              <h3 className="text-base font-semibold text-gray-900">
                 3.1 Personal Information
               </h3>
-              <p className="mb-3">
-                <strong>"Personal Information"</strong> means information you
-                provide or that we process in an identifiable manner when you
-                create or manage an account, including:
+              <p>
+                <strong>&ldquo;Personal Information&rdquo;</strong> means
+                information you provide or that we process in an identifiable
+                manner when you create or manage an account, including:
               </p>
-              <div className="space-y-1.5">
-                {[
-                  "Name",
-                  "Email address",
-                  "Securely hashed password",
-                  "Phone number",
-                  "Subscription plan selections",
-                  "Authentication data (including Google or Apple credentials limited to name, email and tokens)",
-                  "Payment information provided to and processed by our third-party processors",
-                  "Identity or credential numbers you provide (e.g., IATA, CLIA)",
-                  "Device and browser information",
-                  "IP address",
-                  "App and website log data",
-                  "Search and usage activity",
-                  "Crash diagnostics",
-                  "Subscription and account activity",
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5 flex-shrink-0" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-3">
-                For visitors who do not create accounts or log in, technical
-                data is collected only in anonymized or aggregated form and is
-                not used to identify individuals. We do not store your full
-                payment card details.
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Name</li>
+                <li>Email address</li>
+                <li>Securely hashed password</li>
+                <li>Phone number</li>
+                <li>Subscription plan selections</li>
+                <li>
+                  Authentication data (including Google or Apple credentials
+                  limited to name, email and tokens)
+                </li>
+                <li>
+                  Payment information provided to and processed by our
+                  third-party processors
+                </li>
+                <li>
+                  Identity or credential numbers you provide (e.g., IATA, CLIA)
+                </li>
+                <li>Device and browser information</li>
+                <li>IP address</li>
+                <li>App and website log data</li>
+                <li>Search and usage activity</li>
+                <li>Crash diagnostics</li>
+                <li>Subscription and account activity</li>
+              </ul>
+              <p>
+                For visitors who do not create accounts or log in, technical data
+                is collected only in anonymized or aggregated form and is not used
+                to identify individuals. We do not store your full payment card
+                details.
               </p>
             </div>
 
-            <div>
-              <h3 className="text-sm font-semibold text-[#171717] mb-3 pb-1 border-b border-gray-100">
-                3.2 User Content (Photos & Metadata)
+            <div className="space-y-3">
+              <h3 className="text-base font-semibold text-gray-900">
+                3.2 User Content (Photos &amp; Metadata)
               </h3>
-              <p className="mb-3">
-                <strong>"User Content"</strong> includes any photos, tags,
-                descriptions, and other materials you upload to the Services.
-                When you upload photos, we process:
+              <p>
+                <strong>&ldquo;User Content&rdquo;</strong> includes any photos,
+                tags, descriptions, and other materials you upload to the
+                Services. When you upload photos, we process:
               </p>
-              <div className="space-y-1.5">
-                {[
-                  "The image file",
-                  "Limited embedded metadata, such as timestamp and file type. Location metadata contained in image files is not intentionally extracted or used and may be removed during processing.",
-                  "Tags, destinations, categories, and locations you enter",
-                  "Metadata provided by integrated APIs (such as place name, address, and coordinates from Google Places when a user selects a location)",
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5 flex-shrink-0" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>The image file</li>
+                <li>
+                  Limited embedded metadata, such as timestamp and file type.
+                  Location metadata contained in image files is not intentionally
+                  extracted or used and may be removed during processing.
+                </li>
+                <li>Tags, destinations, categories, and locations you enter</li>
+                <li>
+                  Metadata provided by integrated APIs (such as place name,
+                  address, and coordinates from Google Places when a user
+                  selects a location)
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
 
-        {/* S4 */}
-        <div id="s4" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              4
-            </span>
-            <h2 className="text-xl font-bold">How We Use Your Information</h2>
-          </div>
-          <div className="pl-11 text-gray-600 text-sm leading-relaxed space-y-3">
+          {/* 4. HOW WE USE YOUR INFORMATION */}
+          <div className="space-y-4">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              4. HOW WE USE YOUR INFORMATION
+            </h2>
             <p>We use Personal Information and User Content to:</p>
-            <div className="space-y-1.5">
-              {[
-                "Provide, maintain, and improve the Services",
-                "Store, process, organize, and deliver your photos",
-                "Enable search, discovery, and tagging features",
-                "Verify identity and professional credentials",
-                "Support automated tools, including human-presence detection, image cleanup, and user-selected location tagging",
-                "Process payments and manage account status",
-                "Send important notices related to your account or the Services",
-                "Enforce our Terms and policies",
-                "Detect and prevent fraud, abuse, or illegal activities",
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5 flex-shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Provide, maintain, and improve the Services</li>
+              <li>Store, process, organize, and deliver your photos</li>
+              <li>Enable search, discovery, and tagging features</li>
+              <li>Verify identity and professional credentials</li>
+              <li>
+                Support automated tools, including human-presence detection,
+                image cleanup, and user-selected location tagging
+              </li>
+              <li>Process payments and manage account status</li>
+              <li>
+                Send important notices related to your account or the Services
+              </li>
+              <li>Enforce our Terms and policies</li>
+              <li>Detect and prevent fraud, abuse, or illegal activities</li>
+            </ul>
             <p>
               Authorized administrator personnel may access Personal Information
               and User Content as reasonably necessary to moderate content,
@@ -195,23 +187,19 @@ export default function PrivacyPolicy() {
               administrator actions are logged and monitored.
             </p>
             <p>
-              We do not "sell" or "share" Personal Information as defined under
-              the California Consumer Privacy Act (CCPA/CPRA).
+              We do not &ldquo;sell&rdquo; or &ldquo;share&rdquo; Personal
+              Information as defined under the California Consumer Privacy Act
+              (CCPA/CPRA).
             </p>
           </div>
-        </div>
 
-        {/* S5 */}
-        <div id="s5" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              5
-            </span>
-            <h2 className="text-xl font-bold">Photo Processing & AI Tools</h2>
-          </div>
-          <div className="pl-11 text-gray-600 text-sm leading-relaxed space-y-5">
-            <div>
-              <h3 className="text-sm font-semibold text-[#171717] mb-3 pb-1 border-b border-gray-100">
+          {/* 5. PHOTO PROCESSING & AI TOOLS */}
+          <div className="space-y-4">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              5. PHOTO PROCESSING &amp; AI TOOLS
+            </h2>
+            <div className="space-y-2">
+              <h3 className="text-base font-semibold text-gray-900">
                 5.1 Automated Detection
               </h3>
               <p>
@@ -223,8 +211,8 @@ export default function PrivacyPolicy() {
                 determine the identity of any person in a photo.
               </p>
             </div>
-            <div>
-              <h3 className="text-sm font-semibold text-[#171717] mb-3 pb-1 border-b border-gray-100">
+            <div className="space-y-2">
+              <h3 className="text-base font-semibold text-gray-900">
                 5.2 Third-Party AI Services
               </h3>
               <p>
@@ -232,171 +220,128 @@ export default function PrivacyPolicy() {
                 such as image detection, cleanup editing, and location services.
                 These providers process data on our behalf and are contractually
                 restricted to using it only to provide the Services. We take
-                reasonable steps to prevent User Content from being used to
-                train or improve unrelated AI models.
+                reasonable steps to prevent User Content from being used to train
+                or improve unrelated AI models.
               </p>
             </div>
-            <div>
-              <h3 className="text-sm font-semibold text-[#171717] mb-3 pb-1 border-b border-gray-100">
-                5.3 Location Metadata & APIs
+            <div className="space-y-2">
+              <h3 className="text-base font-semibold text-gray-900">
+                5.3 Location Metadata &amp; APIs
               </h3>
               <p>
                 Users may choose to associate photos with locations using search
                 and selection tools powered by Google Places. When a user
                 selects a location, we receive the place name, address, and
                 coordinates from Google in order to label and organize the
-                photo. This information comes from Google's place database, not
-                from the user's device or the photo's embedded metadata.
+                photo. This information comes from Google&apos;s place database,
+                not from the user&apos;s device or the photo&apos;s embedded
+                metadata.
               </p>
             </div>
           </div>
-        </div>
 
-        {/* S6 */}
-        <div id="s6" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              6
-            </span>
-            <h2 className="text-xl font-bold">How We Share Information</h2>
-          </div>
-          <div className="pl-11 text-gray-600 text-sm leading-relaxed space-y-5">
-            <div>
-              <h3 className="text-sm font-semibold text-[#171717] mb-3 pb-1 border-b border-gray-100">
+          {/* 6. HOW WE SHARE INFORMATION */}
+          <div className="space-y-4">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              6. HOW WE SHARE INFORMATION
+            </h2>
+            <div className="space-y-2">
+              <h3 className="text-base font-semibold text-gray-900">
                 6.1 Service Providers
               </h3>
-              <p className="mb-3">
+              <p>
                 We share information with service providers performing functions
                 on our behalf, including:
               </p>
-              <div className="space-y-1.5">
-                {[
-                  "Cloud hosting and storage providers",
-                  "Payment processors",
-                  "Identity and credential verification services",
-                  "AI and image processing vendors",
-                  "Analytics and performance monitoring services",
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5 flex-shrink-0" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-3">
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Cloud hosting and storage providers</li>
+                <li>Payment processors</li>
+                <li>Identity and credential verification services</li>
+                <li>AI and image processing vendors</li>
+                <li>Analytics and performance monitoring services</li>
+              </ul>
+              <p>
                 These third parties act as service providers, not data brokers,
                 and may only process information under our instructions.
               </p>
             </div>
-            <div>
-              <h3 className="text-sm font-semibold text-[#171717] mb-3 pb-1 border-b border-gray-100">
+            <div className="space-y-2">
+              <h3 className="text-base font-semibold text-gray-900">
                 6.2 Other Users
               </h3>
               <p>
                 Content and associated metadata you upload is visible to other
                 verified users. User Content may appear in search results and
                 other verified users may download it. Once downloaded, we cannot
-                guarantee how other users use, share, or distribute that
-                content. If another user has already downloaded your User
-                Content, those copies cannot be revoked even if you later delete
-                your account.
+                guarantee how other users use, share, or distribute that content.
+                If another user has already downloaded your User Content, those
+                copies cannot be revoked even if you later delete your account.
               </p>
             </div>
-            <div>
-              <h3 className="text-sm font-semibold text-[#171717] mb-3 pb-1 border-b border-gray-100">
+            <div className="space-y-2">
+              <h3 className="text-base font-semibold text-gray-900">
                 6.3 Legal Obligations
               </h3>
               <p>
                 We may disclose your information if we determine it is
                 reasonably necessary to comply with legal obligations, respond
-                to appropriate government requests, prevent harm, or protect our
-                rights.
+                to appropriate government requests, prevent harm, or protect
+                our rights.
               </p>
             </div>
           </div>
-        </div>
 
-        {/* S7 */}
-        <div id="s7" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              7
-            </span>
-            <h2 className="text-xl font-bold">Data Storage & Security</h2>
-          </div>
-          <div className="pl-11 text-gray-600 text-sm leading-relaxed space-y-3">
+          {/* 7. DATA STORAGE & SECURITY */}
+          <div className="space-y-3">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              7. DATA STORAGE &amp; SECURITY
+            </h2>
             <p>
               We store Personal Information and User Content using reputable
               cloud infrastructure located in the United States. We implement
               safeguards including:
             </p>
-            <div className="space-y-1.5">
-              {[
-                "Encrypted data storage",
-                "Secure access controls",
-                "Monitoring and logging",
-                "Secure password hashing",
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5 flex-shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Encrypted data storage</li>
+              <li>Secure access controls</li>
+              <li>Monitoring and logging</li>
+              <li>Secure password hashing</li>
+            </ul>
             <p>
               However, no system is completely secure. We will notify affected
               users of data breaches as required by applicable law.
             </p>
           </div>
-        </div>
 
-        {/* S8 */}
-        <div id="s8" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              8
-            </span>
-            <h2 className="text-xl font-bold">Data Retention</h2>
-          </div>
-          <div className="pl-11 text-gray-600 text-sm leading-relaxed space-y-3">
+          {/* 8. DATA RETENTION */}
+          <div className="space-y-3">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              8. DATA RETENTION
+            </h2>
             <p>
               We retain Personal Information and User Content for as long as
               necessary to:
             </p>
-            <div className="space-y-1.5">
-              {[
-                "Provide the Services",
-                "Maintain your account",
-                "Comply with legal obligations",
-                "Resolve disputes",
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5 flex-shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Provide the Services</li>
+              <li>Maintain your account</li>
+              <li>Comply with legal obligations</li>
+              <li>Resolve disputes</li>
+            </ul>
             <p>
               When you delete User Content or your account, the content is
               removed from user-accessible systems and enters a soft-delete
-              period of up to 2 months, during which it is inaccessible to users
-              but may be restored upon request. After that period, the content
-              is permanently deleted from active systems.
+              period of up to 2 months, during which it is inaccessible to
+              users but may be restored upon request. After that period, the
+              content is permanently deleted from active systems.
             </p>
           </div>
-        </div>
 
-        {/* S9 */}
-        <div id="s9" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              9
-            </span>
-            <h2 className="text-xl font-bold">
-              Cookies and Similar Technologies
+          {/* 9. COOKIES AND SIMILAR TECHNOLOGIES */}
+          <div className="space-y-3">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              9. COOKIES AND SIMILAR TECHNOLOGIES
             </h2>
-          </div>
-          <div className="pl-11 text-gray-600 text-sm leading-relaxed">
             <p>
               We use cookies, SDKs, and similar technologies to operate the
               Services, maintain security, monitor performance, and diagnose
@@ -405,34 +350,22 @@ export default function PrivacyPolicy() {
               You can control cookies through your browser or device settings.
             </p>
           </div>
-        </div>
 
-        {/* S10 */}
-        <div id="s10" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              10
-            </span>
-            <h2 className="text-xl font-bold">Your Rights (U.S. Residents)</h2>
-          </div>
-          <div className="pl-11 text-gray-600 text-sm leading-relaxed space-y-3">
+          {/* 10. YOUR RIGHTS (U.S. RESIDENTS) */}
+          <div className="space-y-4">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              10. YOUR RIGHTS (U.S. RESIDENTS)
+            </h2>
             <p>Depending on where you live, you may request:</p>
-            <div className="space-y-1.5">
-              {[
-                "Access to your Personal Information",
-                "Correction of inaccurate data",
-                "Deletion of certain Personal Information",
-                "A portable copy of your data",
-                "Information about how we collect and use data",
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5 flex-shrink-0" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Access to your Personal Information</li>
+              <li>Correction of inaccurate data</li>
+              <li>Deletion of certain Personal Information</li>
+              <li>A portable copy of your data</li>
+              <li>Information about how we collect and use data</li>
+            </ul>
             <p>Submit requests to:</p>
-            <div className="p-5 bg-gray-50 border border-gray-200 rounded-xl space-y-1">
+            <div className="space-y-1 pl-4">
               <p>
                 <strong>Email:</strong>{" "}
                 <a
@@ -453,51 +386,36 @@ export default function PrivacyPolicy() {
               </p>
             </div>
           </div>
-        </div>
 
-        {/* S11 */}
-        <div id="s11" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              11
-            </span>
-            <h2 className="text-xl font-bold">Children's Privacy</h2>
-          </div>
-          <div className="pl-11 text-gray-600 text-sm leading-relaxed">
+          {/* 11. CHILDREN'S PRIVACY */}
+          <div className="space-y-3">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              11. CHILDREN&apos;S PRIVACY
+            </h2>
             <p>
               The Services are intended for users 18 and older. We do not
               knowingly collect information from minors.
             </p>
           </div>
-        </div>
 
-        {/* S12 */}
-        <div id="s12" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              12
-            </span>
-            <h2 className="text-xl font-bold">Changes to This Policy</h2>
-          </div>
-          <div className="pl-11 text-gray-600 text-sm leading-relaxed">
+          {/* 12. CHANGES TO THIS POLICY */}
+          <div className="space-y-3">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              12. CHANGES TO THIS POLICY
+            </h2>
             <p>
               We may update this Privacy Policy periodically. Updated versions
               become effective when posted to the website or app.
             </p>
           </div>
-        </div>
 
-        {/* S13 */}
-        <div id="s13" className="mb-10 scroll-mt-20">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-8 h-8 rounded-full bg-[#171717] text-white text-xs font-bold flex items-center justify-center flex-shrink-0">
-              13
-            </span>
-            <h2 className="text-xl font-bold">Contact Us</h2>
-          </div>
-          <div className="pl-11">
-            <div className="p-5 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-600 space-y-1">
-              <p className="font-semibold text-[#171717]">
+          {/* 13. CONTACT US */}
+          <div className="space-y-3">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+              13. CONTACT US
+            </h2>
+            <div className="space-y-1 pl-4">
+              <p className="font-semibold text-gray-900">
                 Frame The World, LLC
               </p>
               <p>Attn: Privacy Officer</p>
@@ -529,3 +447,4 @@ export default function PrivacyPolicy() {
     </div>
   );
 }
+
