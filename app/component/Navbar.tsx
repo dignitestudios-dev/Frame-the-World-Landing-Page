@@ -21,15 +21,15 @@ export default function Navbar() {
             Home
           </Link>
 
-          <Link href="#about" className="hover:text-[#6CACDF] transition">
+          <Link href="/#about" className="hover:text-[#6CACDF] transition">
             About
           </Link>
 
-          <Link href="#why-us" className="hover:text-[#6CACDF] transition">
+          <Link href="/#why-us" className="hover:text-[#6CACDF] transition">
             Why Us
           </Link>
 
-          <Link href="#contact" className="hover:text-[#6CACDF] transition">
+          <Link href="/#contact" className="hover:text-[#6CACDF] transition">
             Contact
           </Link>
         </nav>
@@ -63,15 +63,15 @@ export default function Navbar() {
               Home
             </Link>
 
-            <Link href="#about" onClick={() => setOpen(false)}>
+            <Link href="/#about" onClick={() => setOpen(false)}>
               About
             </Link>
 
-            <Link href="#why-us" onClick={() => setOpen(false)}>
+            <Link href="/#why-us" onClick={() => setOpen(false)}>
               Why Us
             </Link>
 
-            <Link href="#contact" onClick={() => setOpen(false)}>
+            <Link href="/#contact" onClick={() => setOpen(false)}>
               Contact
             </Link>
 
