@@ -5,99 +5,117 @@ import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import DownloadModal from "./DownloadModal";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
 
   return (
-    <header className="fixed w-full top-0 z-50 backdrop-blur bg-white/40 border-b border-white/20">
-      <div className="max-w-330 mx-auto flex items-center justify-between px-6 py-4">
-        <button className="md:hidden text-black" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
-
-        <nav className="hidden md:flex items-center gap-10 text-[16px] font-medium text-black">
-          <Link href="/" className="hover:text-[#6CACDF] transition">
-            Home
-          </Link>
-
-          <Link href="/#about" className="hover:text-[#6CACDF] transition">
-            About
-          </Link>
-
-          <Link href="/#why-us" className="hover:text-[#6CACDF] transition">
-            Why Us
-          </Link>
-
-          <Link href="/#contact" className="hover:text-[#6CACDF] transition">
-            Contact
-          </Link>
-        </nav>
-
-        <Image src={Logo} alt="Logo" className="w-30 md:w-37.5" />
-
-        <div className="hidden md:flex items-center gap-3">
-          {/* Get Started Button */}
-          {/* Download App Button */}
-          <button className="flex items-center gap-2 bg-white border border-gray-200 text-black rounded-full pl-5 pr-2 py-2 text-sm font-medium hover:bg-gray-100 transition">
-            Download Mobile App
-            <div className="w-8 h-8 flex items-center justify-center bg-black rounded-full">
-              <ChevronDown size={16} className="text-white" />
-            </div>
+    <>
+      <header className="fixed w-full top-0 z-50 backdrop-blur bg-white/40 border-b border-white/20">
+        <div className="max-w-330 mx-auto flex items-center justify-between px-6 py-4">
+          <button className="md:hidden text-black" onClick={() => setOpen(!open)}>
+            {open ? <X size={24} /> : <Menu size={24} />}
           </button>
-          <Link
-            href="https://app.frametheworld.org/login"
-            target="_blank"
-            className="flex items-center gap-2 bg-white border border-gray-200 text-black rounded-full pl-5 pr-2 py-4 text-sm font-medium hover:bg-gray-100 transition"
-          >
-            Get Started
-            <ArrowRight size={18} />
-          </Link>
-        </div>
-      </div>
 
-      {open && (
-        <div className="md:hidden bg-white/90 backdrop-blur-md border-t">
-          <div className="flex flex-col items-center gap-5 py-6 text-black font-medium">
-            <Link href="/" onClick={() => setOpen(false)}>
+          <nav className="hidden md:flex items-center gap-10 text-[16px] font-medium text-black">
+            <Link href="/" className="hover:text-[#6CACDF] transition">
               Home
             </Link>
 
-            <Link href="/#about" onClick={() => setOpen(false)}>
+            <Link href="/#about" className="hover:text-[#6CACDF] transition">
               About
             </Link>
 
-            <Link href="/#why-us" onClick={() => setOpen(false)}>
+            <Link href="/#why-us" className="hover:text-[#6CACDF] transition">
               Why Us
             </Link>
 
-            <Link href="/#contact" onClick={() => setOpen(false)}>
+            <Link href="/#contact" className="hover:text-[#6CACDF] transition">
               Contact
             </Link>
+          </nav>
 
-            {/* Get Started */}
-            <Link
-              href="https://app.frametheworld.org/login"
-              target="_blank"
-              onClick={() => setOpen(false)}
-              className="flex items-center gap-2 bg-[#6CACDF] text-white rounded-full pl-5 pr-2 py-2 text-sm font-medium hover:bg-[#5a9bd3] transition"
+          <Image src={Logo} alt="Logo" className="w-30 md:w-37.5" />
+
+          <div className="hidden md:flex items-center gap-3">
+            {/* Download Mobile App Button */}
+            <button
+              onClick={() => setIsDownloadModalOpen(true)}
+              className="flex items-center gap-2 bg-white border border-gray-200 text-black rounded-full pl-5 pr-2 py-2 text-sm font-medium hover:bg-gray-100 transition cursor-pointer"
             >
-              Get Started
-              <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full">
-                <ArrowRight size={16} className="text-[#6CACDF]" />
-              </div>
-            </Link>
-
-            {/* Download Mobile App */}
-            <button className="flex items-center gap-2 bg-white border border-gray-200 text-black rounded-full pl-5 pr-2 py-2 text-sm font-medium hover:bg-gray-100 transition">
               Download Mobile App
               <div className="w-8 h-8 flex items-center justify-center bg-black rounded-full">
                 <ChevronDown size={16} className="text-white" />
               </div>
             </button>
+            <Link
+              href="https://app.frametheworld.org/login"
+              target="_blank"
+              className="flex items-center gap-2 bg-white border border-gray-200 text-black rounded-full pl-5 pr-2 py-4 text-sm font-medium hover:bg-gray-100 transition"
+            >
+              Get Started
+              <ArrowRight size={18} />
+            </Link>
           </div>
         </div>
-      )}
-    </header>
+
+        {open && (
+          <div className="md:hidden bg-white/90 backdrop-blur-md border-t">
+            <div className="flex flex-col items-center gap-5 py-6 text-black font-medium">
+              <Link href="/" onClick={() => setOpen(false)}>
+                Home
+              </Link>
+
+              <Link href="/#about" onClick={() => setOpen(false)}>
+                About
+              </Link>
+
+              <Link href="/#why-us" onClick={() => setOpen(false)}>
+                Why Us
+              </Link>
+
+              <Link href="/#contact" onClick={() => setOpen(false)}>
+                Contact
+              </Link>
+
+              {/* Get Started */}
+              <Link
+                href="https://app.frametheworld.org/login"
+                target="_blank"
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-2 bg-[#6CACDF] text-white rounded-full pl-5 pr-2 py-2 text-sm font-medium hover:bg-[#5a9bd3] transition"
+              >
+                Get Started
+                <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full">
+                  <ArrowRight size={16} className="text-[#6CACDF]" />
+                </div>
+              </Link>
+
+              {/* Download Mobile App */}
+              <button
+                onClick={() => {
+                  setOpen(false);
+                  setIsDownloadModalOpen(true);
+                }}
+                className="flex items-center gap-2 bg-white border border-gray-200 text-black rounded-full pl-5 pr-2 py-2 text-sm font-medium hover:bg-gray-100 transition cursor-pointer"
+              >
+                Download Mobile App
+                <div className="w-8 h-8 flex items-center justify-center bg-black rounded-full">
+                  <ChevronDown size={16} className="text-white" />
+                </div>
+              </button>
+            </div>
+          </div>
+        )}
+      </header>
+
+      {/* Modern Minimalistic Pop-up Modal */}
+      <DownloadModal
+        isOpen={isDownloadModalOpen}
+        onClose={() => setIsDownloadModalOpen(false)}
+      />
+    </>
   );
 }

@@ -66,7 +66,10 @@ export default function AppDownload() {
         mt-8
         "
         >
-          <button
+          <a
+            href="https://apps.apple.com/us/app/frame-the-world/id6762137371"
+            target="_blank"
+            rel="noopener noreferrer"
             className="
           flex items-center gap-2
           bg-white text-black
@@ -74,13 +77,18 @@ export default function AppDownload() {
           rounded-full
           hover:bg-gray-200
           transition
+          cursor-pointer
+          font-medium
           "
           >
             <Image src={Apple} alt="App Store" className="w-5 h-5" />
             App Store
-          </button>
+          </a>
 
-          <button
+          <a
+            href="https://play.google.com/store/apps/details?id=com.dignitestudios.frametheworld"
+            target="_blank"
+            rel="noopener noreferrer"
             className="
           flex items-center gap-2
           bg-white text-black
@@ -88,11 +96,13 @@ export default function AppDownload() {
           rounded-full
           hover:bg-gray-200
           transition
+          cursor-pointer
+          font-medium
           "
           >
             <Image src={PlayStore} alt="Play Store" className="w-5 h-5" />
             Play Store
-          </button>
+          </a>
         </div>
       </div>
 
