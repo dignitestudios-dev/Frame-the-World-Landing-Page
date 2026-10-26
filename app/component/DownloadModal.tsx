@@ -2,20 +2,30 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
-import { X, ArrowUpRight } from "lucide-react";
+import { X, ArrowUpRight, Globe } from "lucide-react";
 import { Apple, PlayStore, Logo } from "@/public/assets/export";
 
 interface DownloadModalProps {
   isOpen: boolean;
   onClose: () => void;
+  title?: string;
+  subtitle?: string;
+  showWebLink?: boolean;
 }
 
 export const APP_STORE_URL =
   "https://apps.apple.com/us/app/frame-the-world/id6762137371";
 export const PLAY_STORE_URL =
   "https://play.google.com/store/apps/details?id=com.dignitestudios.frametheworld";
+export const WEB_APP_URL = "https://app.frametheworld.org/login";
 
-export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
+export default function DownloadModal({
+  isOpen,
+  onClose,
+  title,
+  subtitle,
+  showWebLink = true,
+}: DownloadModalProps) {
   useEffect(() => {
     if (!isOpen) return;
 
@@ -71,14 +81,20 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
             id="download-modal-title"
             className="text-2xl font-bold tracking-tight text-gray-900"
           >
-            Download Mobile App
+            {title ||
+              (showWebLink
+                ? "Get Started with Frame The World"
+                : "Download Mobile App")}
           </h3>
           <p className="text-sm text-gray-500 mt-1.5 max-w-xs">
-            Experience Frame The World on your smartphone. Choose your platform below:
+            {subtitle ||
+              (showWebLink
+                ? "Choose your platform below to sign up, explore, and frame the world together:"
+                : "Experience Frame The World on your smartphone. Choose your platform below:")}
           </p>
         </div>
 
-        {/* Download Options */}
+        {/* Download & Access Options */}
         <div className="flex flex-col gap-3">
           {/* Apple App Store */}
           <a
@@ -100,7 +116,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
                   Download on the
                 </span>
                 <span className="text-base font-semibold text-gray-900 group-hover:text-white leading-tight">
-                  Apple App Store
+                  Apple App Store (iOS)
                 </span>
               </div>
             </div>
@@ -127,17 +143,44 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
                   Get it on
                 </span>
                 <span className="text-base font-semibold text-gray-900 group-hover:text-white leading-tight">
-                  Google Play Store
+                  Google Play Store (Android)
                 </span>
               </div>
             </div>
             <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
+
+          {/* Web App */}
+          {showWebLink && (
+            <a
+              href={WEB_APP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-between p-4 rounded-2xl border border-gray-200 hover:border-black bg-gray-50/70 hover:bg-black hover:text-white transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer"
+            >
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-xl bg-white border border-gray-200/80 group-hover:border-white/20 flex items-center justify-center transition-colors shadow-xs">
+                  <Globe className="w-6 h-6 text-gray-900" />
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="text-[11px] uppercase tracking-wider text-gray-500 group-hover:text-gray-300 font-medium">
+                    Open in browser
+                  </span>
+                  <span className="text-base font-semibold text-gray-900 group-hover:text-white leading-tight">
+                    Web App Platform
+                  </span>
+                </div>
+              </div>
+              <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+          )}
         </div>
 
         {/* Footer Note */}
         <p className="text-xs text-center text-gray-400 mt-6">
-          Free download • Available for iOS and Android
+          {showWebLink
+            ? "Free access • Available for iOS, Android, and Web"
+            : "Free download • Available for iOS and Android"}
         </p>
       </div>
     </div>
